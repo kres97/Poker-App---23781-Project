@@ -33,7 +33,17 @@ the lambda is created and starts running on the server.**
 
 **Another note that lambda functions can invoke other lambda functions and execute operations on the database (permissions are needed).**
 
-**The main algorithm:**
+**Client:**
+
+On connection, the client invokes connect lambda, then invokes join lambda to choose table and enter as spectator,
+to play he invokes sit lambda.
+
+**Server:**
+
+The tables are in the database and each table has its own propeties like the ones for the poker logic and also the information of the users. When connect is invoked it saves the websocket connection of the new client.
+
+
+
 
 
 
