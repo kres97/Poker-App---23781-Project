@@ -20,6 +20,30 @@
     
    - [Cloudwatch](https://aws.amazon.com/cloudwatch/?nc2=type_a)
 
+**The game or the poker table isn't a program or process that runs on the cloud, but it's represented in database (in DynamoDb),
+so there is a main procedure or controller on the cloud that controlls the flow of the game, and it's implemented using Lambda function.
+This service (Lambda) enables you to declare and implement your functions, so every lambda "function" has it's own resources, you can 
+upload multiple files and must have a handler which runs when the lambda is invoked, in addition when a lambda is invoked an instance of
+the lambda is created and starts running on the server.**
+**Our lambda functions are:**
+- controller
+- connect
+- join
+- sit
+
+**Another note that lambda functions can invoke other lambda functions and execute operations on the database (permissions are needed).**
+
+**The main algorithm:**
+
+
+
+
+
+Back to the controller, which has it's own lambda that implements the main algorithm of the game:
+
+Using Lambda we can create and implement our procedures.
+Whenever a lambda function is called, a new instance of the function is created and starts running on the server.
+Lambda functions can invoke other lambda functions, and execute operations on the database, so every lambda function has it’s own “role permissions” (for example: reading from database, or invoking other function).
 
     
     
